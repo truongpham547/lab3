@@ -24,8 +24,7 @@ Router.get("/", function (req, res) {
 
       listSanPham.push(objectdata);
     });
-    //listSanPham.push(objectdata);
-    //return res.status(200).send(listSanPham);
+    return res.status(200).send();
   });
 });
 
