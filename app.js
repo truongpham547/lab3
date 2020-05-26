@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 var indexRouter = require("./routes/index");
-const port = 3000;
+const port = 9000;
 
 app.get("/", function (req, res) {
   res.status(200).send("Hello world!");
