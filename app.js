@@ -7,6 +7,6 @@ app.get("/", function (req, res) {
 });
 app.use(express.static("public"));
 
-app.listen(8888, () => {
+app.listen(8888 || 2222 || 1111, () => {
   console.log("server is running on port 8888");
 });
