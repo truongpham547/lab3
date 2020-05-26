@@ -1,12 +1,9 @@
 const express = require("express");
 const app = express();
-var indexRouter = require("./routes/index");
+const port = 3000;
 
-app.get("/", function (req, res) {
-  res.status(200).send("Hello world!");
-});
-app.use(express.static("public"));
+app.get("/", (req, res) => res.send("Hello World!"));
 
-app.listen(8888 || 2222 || 1111, () => {
-  console.log("server is running on port 8888");
-});
+app.listen(port, () =>
+  console.log(`Example app listening at http://localhost:${port}`)
+);
