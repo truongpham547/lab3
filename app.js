@@ -1,11 +1,17 @@
-const express = require("express");
-const app = express();
+var express = require("express");
 var indexRouter = require("./routes/index");
-const port = 3000;
+var app = express();
+var bodyParser = require("body-parser");
 
-app.use("/", indexRouter);
 app.use(express.static("public"));
 
-app.listen(port, () =>
-  console.log(`Example app listening at http://localhost:${port}`)
-);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.use("/", indexRouter);
+
+app.listen(3000, () => {
+  console.log("server is running on port 3000");
+});
+
+module.exports = app;

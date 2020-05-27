@@ -21,6 +21,7 @@ Router.get("/", function (req, res) {
           Mota: sanpham[5],
           Hinhanh: sanpham[6],
         };
+        console.log(objectdata);
         listSanPham.push(objectdata);
       });
     });
