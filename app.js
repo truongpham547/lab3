@@ -2,7 +2,9 @@ var express = require("express");
 var indexRouter = require("./routes/index");
 var app = express();
 var bodyParser = require("body-parser");
+var cors = require('cors')
 
+app.use(cors()) // Use this after the variable declaration
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
